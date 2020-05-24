@@ -224,7 +224,7 @@ $this->registerJsFile(
                 <div class="icon">
                     <i class="ion ion-pie-graph"></i>
                 </div>
-                <a href="<?php echo Yii::$app->urlManager->createUrl(['/file-storage/index']) ?>"
+                <a href="<?php echo Yii::$app->urlManager->createUrl(['/file/storage/index']) ?>"
                    class="small-box-footer">
                     <?php echo Yii::t('backend', 'More info') ?> <i class="fa fa-arrow-circle-right"></i>
                 </a>

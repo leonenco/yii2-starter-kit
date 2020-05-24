@@ -24,7 +24,7 @@ Yii::info(Yii::$app->components["i18n"]["translations"]['*']['class'], 'test');
 <div class="wrapper">
     <!-- header logo: style can be found in header.less -->
     <header class="main-header">
-        <a href="<?php echo Yii::$app->urlManagerFrontend->createAbsoluteUrl('/') ?>" class="logo">
+        <a href="<?php echo Url::to(['/']) ?>" class="logo">
             <!-- Add the class icon to your logo image or logo icon to add the margining -->
             <?php echo Yii::$app->name ?>
         </a>
@@ -39,6 +39,12 @@ Yii::info(Yii::$app->components["i18n"]["translations"]['*']['class'], 'test');
             </a>
             <div class="navbar-custom-menu">
                 <ul class="nav navbar-nav">
+                    <li id="link-to-frontend" class="notifications-menu">
+                        <a href="<?php echo Yii::$app->urlManagerFrontend->createAbsoluteUrl('/') ?>" target="_blank">
+                            <i class="fa fa-window-restore"></i>
+                            <?php echo Yii::t('backend', 'Frontend') ?>
+                        </a>
+                    </li>
                     <li id="timeline-notifications" class="notifications-menu">
                         <a href="<?php echo Url::to(['/timeline-event/index']) ?>">
                             <i class="fa fa-bell"></i>
