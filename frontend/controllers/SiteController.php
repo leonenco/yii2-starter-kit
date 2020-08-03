@@ -61,6 +61,14 @@ class SiteController extends Controller
     }
 
     /**
+     * @return string
+     */
+    public function actionCalendar()
+    {
+        return $this->render('calendar');
+    }
+
+    /**
      * @return string|Response
      */
     public function actionContact()

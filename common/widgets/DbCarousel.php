@@ -45,7 +45,7 @@ class DbCarousel extends Carousel
     public function init()
     {
         if (!$this->key) {
-            throw new InvalidConfigException("key should be set");
+            throw new InvalidConfigException("Carousel widget \'key\' should be set.");
         }
         $this->assetManager = Instance::ensure($this->assetManager, AssetManager::class);
         $cacheKey = [
